@@ -39,6 +39,7 @@ const serieB = [
         'falli' :0
     }
 ]
+console.log(serieB);
 
 let classifica = document.getElementById('classifica');
 //inizialzo array vuoto
@@ -52,7 +53,8 @@ for (let i = 0; i < serieB.length; i++) {
     serieB[i].falli = randomFalli; 
     let {nomi, falli} = serieB[i];
     //pusho gli oggetti con i nuovi valori nell'array   
-    rank.push(nomi,falli);
+    rank.push({nomi,falli});
+    console.log(rank);
     classifica.innerHTML +=
     `
     <div> ${nomi} falli : ${falli}</div>
